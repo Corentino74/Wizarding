@@ -4,20 +4,20 @@
 
 
 
-\*Bonjour, ceci est un projet personnel ayant pour but de créer une applications pour joueurs de DnD.\*
-\*\*👥Toute contribution est la bienvenue🤝\*\*
+**Bonjour, ceci est un projet personnel ayant pour but de créer une applications pour joueurs de DnD**
+*👥Toute contribution est la bienvenue🤝*
 
 
 
-\##Fonctionalités principales prévues :
+##Fonctionalités principales prévues :
 
 
 
-\##Architecture actuelle :
+##Architecture actuelle :
 
 
 
-\###Contributeurs notables :
+###Contributeurs notables :
 
 
 
