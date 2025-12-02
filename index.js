@@ -6,7 +6,7 @@ const path = require('path');
 // Express
 const express = require('express');
 const app = express();
-const port = 33; // CLAIR OBSCUR TROUBLE DE RATURE COURBERA EFFIEL
+const port = 3333; // CLAIR OBSCUR TROUBLE DE RATURE COURBERA EFFIEL
 
 // Handlebars
 const hbs = require("hbs");
@@ -26,6 +26,29 @@ const {Database} = require('sqlite3');
 const {send} = require("process");
 const prisma = new PrismaClient();
 
+// Middleware pour les fichiers statiques (CSS, JS, images...)
+// Serve `public/` first (recommended). Also serve the project root so
+// files placed at the repository root (e.g. `/style.css`) are reachable
+// during development. In production prefer a single dedicated `public/` folder.
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname)));
+
+
+
 // ---- Routes ---- 
 
 // Route racine
+app.get('/', (req, res) => {
+    res.render("index");
+});
+
+app.get('/fiches_personnages', async (req, res) => {
+    res.render("fiches_personnages/index");
+});
+
+// Vérification boot
+// Démarrage du serveur
+app.listen(port, () => {
+    console.log(`Serveur démarré sur http://localhost:${port}`);
+});
+
